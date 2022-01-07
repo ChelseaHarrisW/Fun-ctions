@@ -252,6 +252,71 @@ result2 = square(4)
 console.log(result2)
 
 
-//
+// deconstruct of a car factory
 
+const createChassis = () => {
+	// Create a new object. No properties yet.
+	const newChassisObject = {}
+
+	return newChassisObject
+}
+
+//taking 
+const addBody = (chassisObject) => {
+    // Use dot notation to add a new property
+	chassisObject.body = "Fever"
+    
+	// Return the chassis that now has a body property on it
+	return chassisObject
+}
+const carStart= createChassis()
+const carWithBody= addBody(carStart)
+
+const addWheels = (chassisObject) => {
+	// Use dot notation to add a new property
+	chassisObject.wheels = "rolling"
+
+	// Return the chassis that now has a body property on it
+	return chassisObject
+}
+const carWithBodyAndWheels = addWheels(carWithBody)
+
+// invoking add body fx and storing return value in CharisseWithBody
+
+const addEngine = (chassisObject) => {
+	// Use dot notation to add a new property
+	chassisObject.Engine = "V8"
+
+	// Return the chassis that now has a body property on it
+	return chassisObject
+}
+const externalCar= addEngine(carWithBodyAndWheels)
+
+
+
+const addSteeringWheel = (chassisObject) => {
+	// Use dot notation to add a new property
+	chassisObject.SteeringWheel = "15in mod."
+
+	// Return the chassis that now has a body property on it
+	return chassisObject
+}
+
+const externalCarWithSteeringWheel = addSteeringWheel(externalCar)
+
+
+const addDriveTrain = (chassisObject) => {
+	// Use dot notation to add a new property
+	chassisObject.DriveTrain = "Off-road package"
+
+	// Return the chassis that now has a body property on it
+	return chassisObject
+}
+
+const offRoadPack = addDriveTrain(externalCarWithSteeringWheel)
+
+console.log(offRoadPack)
+
+
+// Now a candy factory
 
