@@ -66,42 +66,42 @@ console.log(jenna)
 // how functions bake cakes:
 
 const rotateCake = () => {
-	// Code to rotate the cake
-   return console.log ( 'rotate the cake')
+    // Code to rotate the cake
+    return console.log('rotate the cake')
 }
 
 const gatherIngredients = () => {
-	// Code to gather the ingredients from storage
-    return console.log( 'get ingredients from pantry to prepare for measuring')
+    // Code to gather the ingredients from storage
+    return console.log('get ingredients from pantry to prepare for measuring')
 }
 
 const measureIngredients = () => {
-	// Code to measure the ingredients
-    return console.log( 'measure ingredients')
+    // Code to measure the ingredients
+    return console.log('measure ingredients')
 }
 
 const addFrosting = () => {
-	// Code to add frosting to a baked cake
-    console.log( 'add you favorite frosting to a baked, and cooled cake')
+    // Code to add frosting to a baked cake
+    console.log('add you favorite frosting to a baked, and cooled cake')
 }
 
 const startOven = () => {
-	// Code to turn on the oven to a specific temperature
+    // Code to turn on the oven to a specific temperature
     console.log('preheat your oven to 345')
 }
 
 const createBatter = () => {
-	// Code to create some cake batter
+    // Code to create some cake batter
     console.log('create batter by mixing together all measured ingredients')
 }
 
 const checkIfDone = () => {
-	// Code to check if the cake is done
+    // Code to check if the cake is done
     console.log('at 30 minitues take a toothpick and poke the center of the cake to check doneness')
 }
 
 const startBaking = () => {
-	// Code to put the cake batter into the oven
+    // Code to put the cake batter into the oven
     console.log('place cake in the oven')
 }
 
@@ -255,62 +255,62 @@ console.log(result2)
 // deconstruct of a car factory
 
 const createChassis = () => {
-	// Create a new object. No properties yet.
-	const newChassisObject = {}
+    // Create a new object. No properties yet.
+    const newChassisObject = {}
 
-	return newChassisObject
+    return newChassisObject
 }
 
 //taking 
 const addBody = (chassisObject) => {
     // Use dot notation to add a new property
-	chassisObject.body = "Fever"
-    
-	// Return the chassis that now has a body property on it
-	return chassisObject
+    chassisObject.body = "Fever"
+
+    // Return the chassis that now has a body property on it
+    return chassisObject
 }
-const carStart= createChassis()
-const carWithBody= addBody(carStart)
+const carStart = createChassis()
+const carWithBody = addBody(carStart)
 
 const addWheels = (chassisObject) => {
-	// Use dot notation to add a new property
-	chassisObject.wheels = "rolling"
+    // Use dot notation to add a new property
+    chassisObject.wheels = "rolling"
 
-	// Return the chassis that now has a body property on it
-	return chassisObject
+    // Return the chassis that now has a body property on it
+    return chassisObject
 }
 const carWithBodyAndWheels = addWheels(carWithBody)
 
 // invoking add body fx and storing return value in CharisseWithBody
 
 const addEngine = (chassisObject) => {
-	// Use dot notation to add a new property
-	chassisObject.Engine = "V8"
+    // Use dot notation to add a new property
+    chassisObject.Engine = "V8"
 
-	// Return the chassis that now has a body property on it
-	return chassisObject
+    // Return the chassis that now has a body property on it
+    return chassisObject
 }
-const externalCar= addEngine(carWithBodyAndWheels)
+const externalCar = addEngine(carWithBodyAndWheels)
 
 
 
 const addSteeringWheel = (chassisObject) => {
-	// Use dot notation to add a new property
-	chassisObject.SteeringWheel = "15in mod."
+    // Use dot notation to add a new property
+    chassisObject.SteeringWheel = "15in mod."
 
-	// Return the chassis that now has a body property on it
-	return chassisObject
+    // Return the chassis that now has a body property on it
+    return chassisObject
 }
 
 const externalCarWithSteeringWheel = addSteeringWheel(externalCar)
 
 
 const addDriveTrain = (chassisObject) => {
-	// Use dot notation to add a new property
-	chassisObject.DriveTrain = "Off-road package"
+    // Use dot notation to add a new property
+    chassisObject.DriveTrain = "Off-road package"
 
-	// Return the chassis that now has a body property on it
-	return chassisObject
+    // Return the chassis that now has a body property on it
+    return chassisObject
 }
 
 const offRoadPack = addDriveTrain(externalCarWithSteeringWheel)
@@ -319,4 +319,75 @@ console.log(offRoadPack)
 
 
 // Now a candy factory
+// What are my steps?
 
+// Buy some milk chocolate in buy chocolate
+// Add some mint flavoring in flavor chocolate
+// Combine the chocolate and mint in mix chocolate
+// Bake the mixture
+// Break the hardened sheet into 6 pieces
+// 🍫 🍫 🍫 🍫 🍫 🍫 Enjoy!
+
+
+const buyChocolate = () => {
+    const boughtChocolate = { type: "Milk-chocolate" }
+    return boughtChocolate
+}
+
+
+const addFlavoring = (chocolateObj) => {
+    // Use dot notation to add a new property
+    chocolateObj.flavor = "mint-chocolate"
+
+    // Return the chassis that now has a body property on it
+    return chocolateObj
+}
+
+const milkChocolate = buyChocolate()
+const mintChocolate = addFlavoring(milkChocolate)
+
+// the function below is checking to see if the flavor is mint before adding the baked property
+const makeBarkMixture = (chocolateObj) => {
+    // Use dot notation to add a new property
+    if (chocolateObj.flavor === "mint-chocolate") {
+        chocolateObj.mix = true
+    } else { chocolateObj.mix = false }
+
+    // Return the chassis that now has a body property on it
+    return chocolateObj
+
+}
+
+const mixChocolate = makeBarkMixture(milkChocolate)
+
+//the function below should check if the mixed property on the incoming object has a value of true.
+const bakeChocolate = (chocolateObj) => {
+    // Use dot notation to add a new property
+    if(chocolateObj.mix === true){
+        chocolateObj.bake=true
+    } else{chocolateObj.bake= false}
+
+    // Return the chassis that now has a body property on it
+    return chocolateObj
+}
+console.log(bakeChocolate(mixChocolate))
+const cookChocolate = bakeChocolate(milkChocolate)
+
+const breakCandy = (chocolateObj) => {
+    // Use dot notation to add a new property
+
+    chocolateObj.break = "break chocolate"
+    if (chocolateObj.bake === true) {
+        return console.log(["Mint-chocolate-peice", "Mint-chocolate-peice", "Mint-chocolate-peice", "Mint-chocolate-peice", "Mint-chocolate-peice", "Mint-chocolate-peice", "Mint-chocolate-peice"])
+    }
+
+
+    // Return the chassis that now has a body property on it
+    return chocolateObj
+}
+
+const makePeices = breakCandy(milkChocolate)
+
+console.log(makePeices)
+
+// ask steve to wallk you through the final step of the break block
